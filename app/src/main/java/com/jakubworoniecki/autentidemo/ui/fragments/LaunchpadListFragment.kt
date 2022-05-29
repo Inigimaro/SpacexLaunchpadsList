@@ -5,8 +5,6 @@ import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.jakubworoniecki.autentidemo.R
 import com.jakubworoniecki.autentidemo.databinding.LaunchpadListBinding
@@ -45,10 +43,7 @@ class LaunchpadListFragment : Fragment(R.layout.launchpad_list),
 
     private fun observe() {
         viewModel.launchpads.observe(viewLifecycleOwner) {
-            if (it == null) {
-                binding.noLaunchpads.visibility = View.VISIBLE
-            } else {
-                binding.noLaunchpads.visibility = View.GONE
+            if (it != null) {
                 lAdapter.submitData(viewLifecycleOwner.lifecycle, it)
             }
             viewModel.changeIsLoading(false)
