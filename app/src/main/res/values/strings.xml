@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">AutentiDemo</string>
+    <string name="no_launchpads_found">No launchpads found</string>
+    <string name="name">Name:</string>
+    <string name="location">Location:</string>
+    <string name="details">Details:</string>
+    <string name="launched_vehicles">Launched vehicles:</string>
+    <string name="attempted_launches">Attempted launches:</string>
+    <string name="successful_launches">Successful launches:</string>
+    <string name="show_on_map">Show on map</string>
+    <string name="longitude">Longitude:</string>
+    <string name="latitude">Latitude:</string>
+</resources>

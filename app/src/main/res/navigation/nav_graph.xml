@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/launchpadListFragment">
+
+    <fragment
+        android:id="@+id/launchpadListFragment"
+        android:name="com.jakubworoniecki.autentidemo.ui.fragments.LaunchpadListFragment"
+        android:label="LaunchpadListFragment"
+        tools:layout="@layout/launchpad_list">
+        <action
+            android:id="@+id/action_launchpadListFragment_to_launchpadDetails"
+            app:destination="@id/launchpadDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/launchpadDetails"
+        android:name="com.jakubworoniecki.autentidemo.ui.fragments.LaunchpadDetails"
+        android:label="LaunchpadDetails" >
+        <argument
+            android:name="launchpad"
+            app:argType="com.jakubworoniecki.autentidemo.model.LaunchpadItem" />
+    </fragment>
+</navigation>
